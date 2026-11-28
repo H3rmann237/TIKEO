@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Liste evenements{% endblock %}
+
+{% block content %}
+    <h1>Evenements disponible</h1>
+    {% for event in events %}
+        <h2>{{ event.nom }}</h2>
+    {% empty %}
+        <p>Aucun évenements pour le moment.</p>
+    {% endfor %}
+{% endblock %}
